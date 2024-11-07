@@ -1,0 +1,30 @@
+classDiagram
+    class UI_Module {
+        - Homepage Component
+        - PG Listings Component
+        - Navigation Component
+    }
+
+    class Review_Ratings_Module {
+        - Review Form Component
+        - Rating Display Component
+        - Review Submission Handling
+    }
+
+    class Data_Management_Module {
+        - Static Data Component
+        - Local Storage Component
+        - Data Display Logic
+    }
+
+    class Styling_Animation_Module {
+        - CSS Styling Component
+        - Animation Component
+    }
+
+    UI_Module "uses" Review_Ratings_Module
+    UI_Module "uses" Data_Management_Module
+    UI_Module "uses" Styling_Animation_Module
+    Review_Ratings_Module "uses" Data_Management_Module
+    Review_Ratings_Module "uses" Styling_Animation_Module
+    Data_Management_Module "uses" Styling_Animation_Module
